@@ -1,7 +1,9 @@
 package com.example.shopassistant;
 
 
-public class Market {
+import java.io.Serializable;
+
+public class Market implements Serializable {
     final static int FRUITS  = 3;
     int orange;
     int cucumber;
@@ -48,6 +50,27 @@ public class Market {
                 return 40;
         }
         return 0;
+    }
+
+    public boolean isFruits(int numFruits, int num){
+        switch (numFruits){
+            case 1:
+                if(this.orange-num<0){
+                    return false;
+                }
+                break;
+            case 2:
+                if(this.cucumber-num<0){
+                    return false;
+                }
+                break;
+            case 3:
+                if(this.apple-num<0){
+                    return false;
+                }
+                break;
+        }
+        return true;
     }
 
 

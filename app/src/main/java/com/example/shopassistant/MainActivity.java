@@ -3,6 +3,7 @@ package com.example.shopassistant;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -14,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    Market market = new Market(70,80,100);
+    Market market = new Market(5,5,5);
     boolean start = true;
     BoxOffice boxOffice = new BoxOffice();
 
@@ -53,6 +54,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        Button seeMarket = (Button) findViewById(R.id.b_seeStrore);
+
+        seeMarket.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view){
+                Intent i = new Intent(MainActivity.this, MarketActivity.class);
+                i.putExtra(Market.class.getSimpleName(), market);
+                startActivity(i);
+            }
+        });
+
+
     }
 
 
@@ -69,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
         TextView tw_money;
         TextView tw_condition;
         LinearLayout validator;
-        Handler handler;
 
         public Validator(int money, int numValidator){
             this.money = money;
@@ -151,12 +163,12 @@ public class MainActivity extends AppCompatActivity {
                    synchronized(market){
                         int numFruits = Market.randFruits();
                         int priceFruits = Market.getPriceFruits(numFruits);
-                        if(money-priceFruits>=0){
+                        if(money-priceFruits>=0 && market.isFruits(numFruits,1)){
                             money-=priceFruits;
                             market.setFruits(numFruits,1);
                             setFruits(numFruits,1);
                         }
-                        if(money < 20){
+                        if(money < 20 || (!market.isFruits(1,1) && !market.isFruits(2,1)&& !market.isFruits(3,1))){
                             b = false;
                         }
                         /*try {
@@ -179,6 +191,9 @@ public class MainActivity extends AppCompatActivity {
                     tw_money.setText("money:" + money);
                     validator.setBackgroundColor(Color.GREEN);
                     tw_condition.setText("Покупка закончилась");
+                    tw_orange.setText("orange:" + orange);
+                    tw_cucumber.setText("cucumber:" + cucumber);
+                    tw_apple.setText("apple:" + apple);
                     //this.start = true;
                 }
             }
@@ -194,9 +209,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }*/
 
-            tw_orange.setText("orange:" + orange);
-            tw_cucumber.setText("cucumber:" + cucumber);
-            tw_apple.setText("apple:" + apple);
+
 
         }
 
