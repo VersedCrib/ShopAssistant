@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="143dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/validator1"
+                android:layout_width="197dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tw_orange1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="orange:0" />
+
+                <TextView
+                    android:id="@+id/tw_cucumber1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="cucumber:0" />
+
+                <TextView
+                    android:id="@+id/tw_apple1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="apple:0" />
+
+                <TextView
+                    android:id="@+id/tw_money1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="money:100" />
+
+                <TextView
+                    android:id="@+id/tw_condition1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Ещё не начал покупать" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/validator2"
+                android:layout_width="208dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tw_orange2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="orange:0" />
+
+                <TextView
+                    android:id="@+id/tw_cucumber2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="cucumber:0" />
+
+                <TextView
+                    android:id="@+id/tw_apple2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="apple:0" />
+
+                <TextView
+                    android:id="@+id/tw_money2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="money:100" />
+
+                <TextView
+                    android:id="@+id/tw_condition2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Ещё не начал покупать" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="123dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/validator3"
+                android:layout_width="197dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tw_orange3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="orange:0" />
+
+                <TextView
+                    android:id="@+id/tw_cucumber3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="cucumber:0" />
+
+                <TextView
+                    android:id="@+id/tw_apple3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="apple:0" />
+
+                <TextView
+                    android:id="@+id/tw_money3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="money:100" />
+
+                <TextView
+                    android:id="@+id/tw_condition3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Ещё не начал покупать" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/validator4"
+                android:layout_width="208dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tw_orange4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="orange:0" />
+
+                <TextView
+                    android:id="@+id/tw_cucumber4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="cucumber:0" />
+
+                <TextView
+                    android:id="@+id/tw_apple4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="apple:0" />
+
+                <TextView
+                    android:id="@+id/tw_money4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="money:100" />
+
+                <TextView
+                    android:id="@+id/tw_condition4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Ещё не начал покупать" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/validator5"
+                android:layout_width="198dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tw_orange5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="orange:0" />
+
+                <TextView
+                    android:id="@+id/tw_cucumber5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="cucumber:0" />
+
+                <TextView
+                    android:id="@+id/tw_apple5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="apple:0" />
+
+                <TextView
+                    android:id="@+id/tw_money5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="money:100" />
+
+                <TextView
+                    android:id="@+id/tw_condition5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Ещё не начал покупать" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/validator6"
+                android:layout_width="208dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tw_orange6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="orange:0" />
+
+                <TextView
+                    android:id="@+id/tw_cucumber6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="cucumber:0" />
+
+                <TextView
+                    android:id="@+id/tw_apple6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="apple:0" />
+
+                <TextView
+                    android:id="@+id/tw_money6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="money:100" />
+
+                <TextView
+                    android:id="@+id/tw_condition6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="TextView" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/b_startMaket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Начать торговлю" />
+
+        <Button
+            android:id="@+id/b_seeStrore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="посмотреть склад" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
