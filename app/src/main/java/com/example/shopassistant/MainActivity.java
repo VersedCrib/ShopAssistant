@@ -33,10 +33,15 @@ public class MainActivity extends AppCompatActivity {
                     Validator[] validator_ar = new Validator[6];
                     for (int i = 0; i < validator_ar.length; i++) {
                         validator_ar[i] = new Validator(100, i + 1);
-                        //validator_ar[i].execute();
+                        validator_ar[i].execute();
+                        try {
+                            Thread.sleep(1);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
 
-                    validator_ar[0].execute();
+                    //validator_ar[0].execute();
                     /*validator_ar[1].execute();
                     //validator_ar[2].execute();
                     validator_ar[3].execute();
@@ -132,9 +137,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             //super.onPreExecute();
-
             validator.setBackgroundColor(Color.YELLOW);
-
             tw_condition.setText("Покупка началась");
 
 
@@ -156,12 +159,13 @@ public class MainActivity extends AppCompatActivity {
                         if(money < 20){
                             b = false;
                         }
-                        onProgressUpdate();
                         /*try {
-                            Thread.sleep(4000);
+                           Thread.sleep(500);
                         } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }*/
+                           e.printStackTrace();
+                        }
+                        onProgressUpdate();*/
+
                     }
                 }
                 this.start = false;
@@ -184,12 +188,15 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onProgressUpdate(Void... args) {
             //super.onProgressUpdate();
+            /*try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }*/
 
-            this.tw_orange.setText("orange:" + this.orange);
-            this.tw_cucumber.setText("cucumber:" + this.cucumber);
-            this.tw_apple.setText("apple:" + this.apple);
-
-
+            tw_orange.setText("orange:" + orange);
+            tw_cucumber.setText("cucumber:" + cucumber);
+            tw_apple.setText("apple:" + apple);
 
         }
 
