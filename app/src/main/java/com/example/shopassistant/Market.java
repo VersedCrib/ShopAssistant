@@ -74,6 +74,18 @@ public class Market implements Serializable {
     }
 
 
+    public int minPrice(){
 
+        if(isFruits(1,1)){
+            return getPriceFruits(1);
+        } else {
+            if(isFruits(2,1)){
+                return getPriceFruits(1);
+            } else {
+                return getPriceFruits(3);
+            }
+        }
+
+    }
 
 }
